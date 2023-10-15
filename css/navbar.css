@@ -11,18 +11,27 @@ header{
 }
 
 .logo{
-    margin-top: 2%;
-    margin-left: 1%;
-    margin-right: 16%;
+    padding: 2%;
     font-weight: bold;
+    margin-right: 63%;
 }
 
-.info-user{
-    width: auto;
+.login{
+    padding: 2%;
 }
 
-.info-user img{
-    float: right;
-    margin: 5%;
-    width: 6%;
+.login span{
+    margin: 10px;
+}
+
+.login button{
+    padding: 3px;
+    background-color: white;
+    transition: .3s;
+}
+
+.login button:hover{
+    background-color: rgba(213,104,24,1);
+    color: white;
+    cursor: pointer;
 }

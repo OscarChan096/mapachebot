@@ -1,0 +1,30 @@
+.img-logo{
+    margin-top: 50%;
+    width: 100%;
+}
+
+.form{
+    padding-left: 10%;
+    color: white;
+    font-weight: 500;
+}
+
+.width100{
+    width: 100%;
+}
+
+.btn-register{
+    display: flex;
+    justify-content: center;
+    margin-top: 5%;
+}
+
+.btn-register button{
+    padding: 8px;
+}
+
+.btn-register button:hover{
+    background-color: rgba(213,104,24,1);
+    color: white;
+    cursor: pointer;
+}
