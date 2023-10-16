@@ -1,0 +1,24 @@
+.full-height {
+    height: 73vh;
+}
+
+.container{
+    color: white;
+    font-weight: 700;
+}
+
+.flex-jcc{
+    display: flex;
+    justify-content: center;
+}
+
+.login-logo{
+    margin-left: 4%;
+    width: 13%;
+}
+
+.content button:hover{
+    background-color: rgba(213,104,24,1);
+    color: white;
+    cursor: pointer;
+}
