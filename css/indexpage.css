@@ -1,0 +1,48 @@
+.chat{
+    height: auto;
+    margin-top: 3%;
+    display: flex;
+    justify-content: center;
+}
+
+.logo{
+    height: 30%;
+    width: 20%;
+}
+
+.text-welcome{
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 2rem;
+    margin-top: 50px;
+}
+
+.redes-sociales{
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+}
+
+li.ico-sociales{
+    float: left;
+    margin: 50px;
+}
+
+.logo-facebook{
+    width: 55px;
+    transition: .5s;
+}
+
+.logo-itch{
+    width: 55px;
+    transition: .5s;
+}
+
+.logo-facebook:hover{
+    width: 70px;
+}
+
+.logo-itch:hover{
+    width: 70px;
+}
