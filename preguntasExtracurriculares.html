@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MapacheBot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/contentMain.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Agregando estilos internos para demostración, puedes moverlos a tu archivo CSS */
+        .search {
+            margin-top: 150px; /* Añadir un margen en la parte superior */
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="content row">
+            <!-- COLUMNA IZQUIERDA -->
+            <div class="dash-lchat col-md-3">
+                <div class="header-lchat top">
+                    <img src="./public/chatbot.svg" alt="logo">
+                    <span class="text-select-none">MapacheBot</span>
+                </div>
+                <div class="body-lchat full-height">
+                    <div class="container-body-lchat">
+                        <ul class="ul-lchat">
+                            <a href="#">
+                                <li>Agregar pregunta/respuesta</li>
+                            </a>
+                            <a href="#">
+                                <li>Modificar pregunta/respuesta</li>
+                            </a>
+                            <a href="#">
+                                <li>Consultar pregunta/respuesta</li>
+                            </a>
+                            <a href="#">
+                                <li>Eliminar pregunta/respuesta</li>
+                            </a>
+                            <a href="#">
+                                <li>Administrar permisos</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-user">
+                    <span class="tipo-usuario text-select-none">Administrador</span>
+                    <div class="info-user">
+                        <img src="./public/user-white.png" alt="imagen de usuario">
+                        <span class="name-user text-select-none">NOMBRE DE USUARIO</span>
+                        <!-- ... (resto de tu código de usuario) ... -->
+                    </div>
+                </div>
+            </div>
+
+            <!-- COLUMNA DERECHA -->
+            <div class="dash-dchat col-md-9">
+                
+                <div class="body-dchat">
+                    <div class="chat">
+                        <p class="text-select-none">Selecciona la pregunta de tu interés</p>
+                        <a href="#">
+                            <div class="titulo-categoria"><span>¿Qué actividades extracurriculares ofrecen?</span></div>
+                        </a>
+                       
+                        <!-- ... (otros elementos de tu lista) ... -->
+                    </div>
+                    <div class="search">
+                        <img src="./public/lupa.svg" alt="ico">
+                        <input type="text" placeholder="Filtrar pregunta (Ingresa palabras clave)">
+                        <button id="enviar" class="a-ico-send"><img class="ico-send" src="./public/send.svg" alt="ico"></button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL"
+    crossorigin="anonymous"></script>
+    <script src="./js/popupMenu.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <title>MapacheBot</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/contentMain.css" rel="stylesheet" type="text/css">
+    <style>
+        /* Agregamos estilos para el scroll en la tabla */
+        .scrollable-table {
+            max-height: 400px;
+            /* puedes ajustar este valor según necesites */
+            overflow-y: auto;
+            display: block;
+        }
+
+        /* Estilos para la tabla */
+        table {
+            border-collapse: collapse;
+            width: 100%;
+            border: 10px solid #f1bb06;
+        }
+
+        table th, table td {
+            border: 100px solid #f1bb06;
+            padding: 10px;
+            text-align: left;
+        }
+
+        table tr:nth-child(even) {
+            background-color: #f1bb06;
+        }
+
+        table th {
+            background-color: #f1bb06;
+            color: rgb(23, 7, 247);
+        }
+
+        /* Estilos para el logo y el nombre */
+        .header-lchat img, .header-lchat span {
+            vertical-align: middle;
+        }
+    </style>
+</head>
+
+<body>
+    <main>
+        <div class="content row">
+            <!----------- COLUMNA IZQUIERDA ------------->
+            <div class="dash-lchat col-md-3">
+                <div class="header-lchat top">
+                    <img src="./public/chatbot.svg" alt="logo">
+                    <span class="text-select-none">MapacheBot</span>
+                </div>
+                <div class="body-lchat full-height">
+                    <div class="container-body-lchat">
+
+                        <ul class="ul-lchat">
+                            </a>
+                            <a href="#">
+                                <li>Regresar</li>
+                            </a>
+                        </ul>
+                    </div>
+                </div>
+                <div class="content-user">
+                    <span class="tipo-usuario text-select-none">Administrador</span>
+                    <div class="info-user">
+                        <img src="./public/user-white.png" alt="imagen de usuario">
+                        <span class="name-user text-select-none">NOMBRE DE USUARIO</span>
+                        <button id="mostrarPopup" class="btn-popup-menu"><span class="menu"><img
+                                    src="./public/dotsmenu-white.svg" alt="menu"></span></button>
+                        <div class="popup" id="miPopup">
+                            <div class="popup-contenido">
+                                <span class="cerrar" id="cerrarPopup">&times;</span>
+                                <ul class="ul-popup-menu">
+                                    <a href="#">
+                                        <li>Perfil</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Cerrar sesión</li>
+                                    </a>
+                                    <a href="#">
+                                        <li>Acerca de</li>
+                                    </a>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <!----------- COLUMNA DERECHA ------------->
+            <div class="dash-dchat col-md-9">
+                <div class="header-dchat">
+                    <div class="container mt-5">
+                        <h2>Agregar nuevo registro (Pregunta)</h2>
+                        <form action="/ruta-para-guardar" method="post">
+                            <div class="form-group">
+                                <label for="pregunta">Pregunta:</label>
+                                <input type="text" class="form-control" id="pregunta" name="pregunta">
+                            </div>
+                            <div class="form-group">
+                                <label for="respuesta">Respuesta:</label>
+                                <input type="text" class="form-control" id="respuesta" name="respuesta">
+                            </div>
+                            <div class="form-group">
+                                <label for="categoria">Categoría:</label>
+                                <input type="text" class="form-control" id="categoria" name="categoria">
+                            </div>
+
+                        </form>
+                    </div>
+                    <!-- Agregar más campos según se necesite -->
+                    <button type="submit" class="btn btn-primary mt-3">Dar de alta</button>
+                    </form>
+
+                    <h2 class="mt-5">Registros actuales</h2>
+                    <div class="scrollable-table">
+                        <table class="table table-bordered">
+                            <thead>
+                                <tr>
+                                    <th>idPregunta</th>
+                                    <th>Pregunta</th>
+                                    <th>Respuesta</th>
+                                    <th>Categoría</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <!-- Los datos se llenarían aquí usando un bucle si es dinámico. De lo contrario, agrega filas manualmente -->
+                                <tr>
+                                    <td>1</td>
+                                    <td>¿Qué es el sol?</td>
+                                    <td>Es una estrella en el centro del sistema solar.</td>
+                                    <td>Ciencias</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>¿Cuál es la capital de Francia?</td>
+                                    <td>París.</td>
+                                    <td>Geografía</td>
+                                </tr>
+                                <tr>
+                                    <td>3</td>
+                                    <td>¿Quién escribió "Romeo y Julieta"?</td>
+                                    <td>William Shakespeare.</td>
+                                    <td>Literatura</td>
+                                </tr>
+                                <tr>
+                                    <td>4</td>
+                                    <td>¿Cómo se llama el mayor satélite de Júpiter?</td>
+                                    <td>Ganímedes.</td>
+                                    <td>Ciencias</td>
+                                </tr>
+                                <tr>
+                                    <td>5</td>
+                                    <td>¿Cuántos lados tiene un hexágono?</td>
+                                    <td>Seis.</td>
+                                    <td>Matemáticas</td>
+                                </tr>
+                                <tr>
+                                    <td>6</td>
+                                    <td>¿En qué año comenzó la Primera Guerra Mundial?</td>
+                                    <td>1914.</td>
+                                    <td>Historia</td>
+                                </tr>
+                                <tr>
+                                    <td>7</td>
+                                    <td>¿Qué gas es esencial para la respiración humana?</td>
+                                    <td>Oxígeno.</td>
+                                    <td>Ciencias</td>
+                                </tr>
+                                <tr>
+                                    <td>8</td>
+                                    <td>¿Cuál es el río más largo del mundo?</td>
+                                    <td>Nilo.</td>
+                                    <td>Geografía</td>
+                                </tr>
+                                <tr>
+                                    <td>9</td>
+                                    <td>¿En qué país se encuentra la Torre de Pisa?</td>
+                                    <td>Italia.</td>
+                                    <td>Geografía</td>
+                                </tr>
+                                <tr>
+                                    <td>10</td>
+                                    <td>¿Qué instrumento musical tiene teclas blancas y negras?</td>
+                                    <td>Piano.</td>
+                                    <td>Música</td>
+                                </tr>
+                                <tr>
+                                    <td>11</td>
+                                    <td>¿Quién pintó la Mona Lisa?</td>
+                                    <td>Leonardo da Vinci.</td>
+                                    <td>Arte</td>
+                                </tr>
+                                <!-- Repetir para más registros -->
+
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- No olvides agregar estos scripts si aún no los tienes en tu código original -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+
+
+
+</body>
+
+</html>
